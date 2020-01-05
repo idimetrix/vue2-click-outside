@@ -1,0 +1,70 @@
+{
+  "name": "vue2-click-outside",
+  "description": "Vue directive to react on clicks outside an element without stopping the event propagation",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dmitry Selikhov",
+    "email": "selikhov.dmitrey@gmail.com",
+    "url": "https://www.linkedin.com/in/dimetrix"
+  },
+  "keywords": [],
+  "main": "dist/vue2-click-outside.umd.min.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idimetrix/vue2-click-outside"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idimetrix/vue2-click-outside/issues",
+    "email": "selikhov.dmitrey@gmail.com"
+  },
+  "homepage": "https://github.com/idimetrix/vue2-click-outside#readme",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib 'src/click-outside.js'",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "core-js": "^3.6.1",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.2",
+    "@vue/cli-plugin-eslint": "^4.1.2",
+    "@vue/cli-plugin-unit-jest": "^4.1.2",
+    "@vue/cli-service": "^4.1.2",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "1.0.0-beta.30",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "jest": {
+    "preset": "@vue/cli-plugin-unit-jest"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "pre-push": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
