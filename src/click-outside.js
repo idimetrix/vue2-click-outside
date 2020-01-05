@@ -52,16 +52,19 @@ function update(el, { value, oldValue }) {
   }
 }
 
+const directive = {
+  bind,
+  update,
+  unbind
+};
+
 const plugin = {
   install: function(Vue, options = {}) {
-    const { directive } = { directive: "click-outside", ...options };
+    const { name } = { name: "click-outside", ...options };
 
-    Vue.directive(directive, {
-      bind,
-      update,
-      unbind
-    });
-  }
+    Vue.directive(name, directive);
+  },
+  directive
 };
 
 export default plugin;
