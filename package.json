@@ -1,7 +1,7 @@
 {
   "name": "vue2-click-outside",
   "description": "Vue directive to react on clicks outside an element without stopping the event propagation",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": {
     "name": "Dmitry Selikhov",
     "email": "selikhov.dmitrey@gmail.com",
@@ -30,25 +30,25 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "core-js": "^3.6.1",
-    "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0",
-    "vue": "^2.6.11"
+    "core-js": "^3.6.5",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.3",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.2",
-    "@vue/cli-plugin-eslint": "^4.1.2",
-    "@vue/cli-plugin-unit-jest": "^4.1.2",
-    "@vue/cli-service": "^4.1.2",
+    "@vue/cli-plugin-babel": "^4.5.7",
+    "@vue/cli-plugin-eslint": "^4.5.7",
+    "@vue/cli-plugin-unit-jest": "^4.5.7",
+    "@vue/cli-service": "^4.5.7",
     "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/test-utils": "1.0.0-beta.30",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-vue": "^6.1.2",
-    "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/test-utils": "1.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^7.0.1",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "vue-template-compiler": "^2.6.12"
   },
   "browserslist": [
     "> 1%",

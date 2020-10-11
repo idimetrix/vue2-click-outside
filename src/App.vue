@@ -11,7 +11,7 @@ export default {
   name: "App",
   data() {
     return {
-      text: "I LOVE vue2-click-outside directive!!!"
+      text: "I LOVE vue2-click-outside directive!!!",
     };
   },
   methods: {
@@ -23,8 +23,8 @@ export default {
     },
     onClickOutside3() {
       console.log("onClickOutside3");
-    }
-  }
+    },
+  },
 };
 </script>
 

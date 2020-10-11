@@ -48,8 +48,8 @@ Vue.use(Vue2ClickOutside)
 </script>
 
 <template>
-  <div click-outside="onClickOutside"></div>
-  <div click-outside="clickOutsideConfig"></div>
+  <div v-click-outside="onClickOutside"></div>
+  <div v-click-outside="clickOutsideConfig"></div>
 </template>
 ```
 
@@ -72,7 +72,7 @@ import Vue2ClickOutside from 'vue2-click-outside'
 </script>
 
 <template>
-  <div click-outside="onClickOutside"></div>
+  <div v-click-outside="onClickOutside"></div>
 </template>
 ```
 

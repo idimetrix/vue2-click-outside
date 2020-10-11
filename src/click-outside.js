@@ -10,9 +10,9 @@ function processArguments(value) {
 
   return {
     handler: isFn ? value : value.handler,
-    middleware: value.middleware || (item => item),
+    middleware: value.middleware || ((item) => item),
     events: value.events || ["touchstart", "click"],
-    active: !(value.active === false)
+    active: !(value.active === false),
   };
 }
 
@@ -20,15 +20,15 @@ function bind(el, { value }) {
   const { events, handler, middleware, active } = processArguments(value);
 
   if (active) {
-    el[HANDLERS_PROPERTY] = events.map(event => ({
+    el[HANDLERS_PROPERTY] = events.map((event) => ({
       event,
-      handler: e => {
+      handler: (e) => {
         const isClickOutside = e.target !== el && !el.contains(e.target);
 
         if (isClickOutside && middleware(e)) {
           handler(e);
         }
-      }
+      },
     }));
 
     el[HANDLERS_PROPERTY].map(({ event, handler }) =>
@@ -55,16 +55,16 @@ function update(el, { value, oldValue }) {
 const directive = {
   bind,
   update,
-  unbind
+  unbind,
 };
 
 const plugin = {
-  install: function(Vue, options = {}) {
+  install: function (Vue, options = {}) {
     const { name } = { name: "click-outside", ...options };
 
     Vue.directive(name, directive);
   },
-  directive
+  directive,
 };
 
 export default plugin;
